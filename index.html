@@ -28,27 +28,45 @@
     <div id="content-wrapper">
       <div class="inner clearfix">
         <section id="main-content">
-          <h1>toggle_input_container</h1>
+          <h1>Toggle input container</h1>
 
-<p>Show and hide dom elements when checkboxes are selected.</p>
+          <p>Show and hide dom elements when checkboxes are selected.</p>
 
-<p>Info:</p>
+          <p>Since I'm having a hard time naming and concisely describing this, here's an example:</p>
 
-<p>Since I'm having a hard time naming and concisely describing this</p>
+          <div class="highlight"><pre><span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"good_day"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"good_day"</span> <span class="nt">/&gt;</span>
+            Are you having a good day?
+          <span class="nt">&lt;/label&gt;</span>
 
-<div class="highlight"><pre><span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"good_day"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"good_day"</span> <span class="nt">/&gt;</span>
-  Are you having a good day?
-<span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"show_good_day_more"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"good_day_more"</span><span class="nt">&gt;</span>Please tell us more<span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"good_day_more"</span> <span class="nt">/&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+          </pre></div>
 
-<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"show_good_day_more"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"good_day_more"</span><span class="nt">&gt;</span>Please tell us more<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"good_day_more"</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</pre></div>
+          <div class="highlight"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">'#good_day'</span><span class="p">).</span><span class="nx">toggle_input_container</span><span class="p">(</span><span class="s1">'#show_good_day_more'</span><span class="p">);</span>
+          </pre></div>
 
-<div class="highlight"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">'#good_day'</span><span class="p">).</span><span class="nx">toggle_input_container</span><span class="p">(</span><span class="s1">'#show_good_day_more'</span><span class="p">);</span>
-</pre></div>
+          <form>
+            <label for="good_day">
+              <input type="checkbox" id="good_day" />
+              Are you having a good day?
+            </label>
+
+            <div id="show_good_day_more">
+              <label for="good_day_more">Please tell us more</label>
+              <input id="good_day_more" />
+            </div>
+
+            <script>
+              $(document).ready(function() {
+                $('#good_day').toggle_input_container('#show_good_day_more');
+              });
+            </script>
+          </form>
+
+
         </section>
 
         <aside id="sidebar">
@@ -68,6 +86,6 @@
       </div>
     </div>
 
-  
+
   </body>
 </html>
