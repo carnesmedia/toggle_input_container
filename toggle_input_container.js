@@ -8,7 +8,7 @@
 
 
 // TODO: Take options
-jQuery.fn.toggle_container = function(container) {
+jQuery.fn.toggle_input_container = function(container) {
   container = jQuery(container);
   var show = 'show', hide = 'hide';
 
