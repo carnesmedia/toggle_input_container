@@ -9,6 +9,8 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
 
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://raw.github.com/carnesmedia/toggle_input_container/master/toggle_input_container.js"></script>
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -48,6 +50,7 @@
           <div class="highlight"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">'#good_day'</span><span class="p">).</span><span class="nx">toggle_input_container</span><span class="p">(</span><span class="s1">'#show_good_day_more'</span><span class="p">);</span>
           </pre></div>
 
+          <!-- Start Example -->
           <form>
             <label for="good_day">
               <input type="checkbox" id="good_day" />
@@ -61,10 +64,11 @@
 
             <script>
               $(document).ready(function() {
-                $('#good_day').toggle_input_container('#show_good_day_more');
+                $('#good_day').toggle_container('#show_good_day_more');
               });
             </script>
           </form>
+          <!-- End Example -->
 
 
         </section>
