@@ -19,7 +19,8 @@ jQuery.fn.toggle_input_container = function(container) {
       container[t.is(':checked') ? show : hide]();
     };
 
-    t.change(show_hide);
+    var all = $('[name="' + t.attr('name') + '"]');
+    all.change(show_hide);
     show_hide();
   });
 };

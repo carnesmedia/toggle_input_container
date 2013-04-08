@@ -1,7 +1,7 @@
 toggle_input_container
 ======================
 
-Show and hide dom elements when checkboxes are selected.
+Show and hide dom elements when checkboxes or radios are selected.
 
 Info:
 
