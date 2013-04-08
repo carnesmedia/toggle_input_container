@@ -1,0 +1,61 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <title>Test</title>
+
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="toggle_input_container.js"></script>
+
+    <script>
+      $(function() {
+        $('#checkbox_1').toggle_input_container('#for_checkbox_1');
+        $('#checkbox_2').toggle_input_container('#for_checkbox_2');
+
+        $('#radio_1').toggle_input_container('#for_radio_1');
+        $('#radio_2').toggle_input_container('#for_radio_2');
+      });
+    </script>
+
+  </head>
+  <body>
+    <h1>toggle input container test</h1>
+    <form>
+
+      <fieldset>
+        <label for="checkbox_1">Checkbox 1</label>
+        <input type="checkbox" name="checkbox_1" id="checkbox_1" />
+
+        <label for="checkbox_2">Checkbox 2</label>
+        <input type="checkbox" name="checkbox_2" id="checkbox_2" />
+      </fieldset>
+
+      <div id="for_checkbox_1">
+        OH HAI, this is extra awesome content for checkbox 1
+      </div>
+
+      <div id="for_checkbox_2">
+        OH HAI, this is awesome extra content for checkbox 2
+      </div>
+
+
+
+
+      <fieldset>
+        <label for="radio_1">radio 1</label>
+        <input type="radio" name="radio" id="radio_1" />
+
+        <label for="radio_2">radio 2</label>
+        <input type="radio" name="radio" id="radio_2" />
+      </fieldset>
+
+      <div id="for_radio_1">
+        OH HAI, this is extra awesome content for radio 1
+      </div>
+
+      <div id="for_radio_2">
+        OH HAI, this is awesome extra content for radio 2
+      </div>
+
+    </form>
+  </body>
+</html>
